@@ -17,4 +17,16 @@
 
 Route::get('/', function () {
     return view('frontend/home');
-});
+})->name('frontend.home');
+
+Route::get('/about', function () {
+    return view('frontend/about');
+})->name('frontend.about');
+
+Route::get('/pricing', function () {
+    return view('frontend/pricing');
+})->name('frontend.pricing');
+
+Route::get('/contact', function () {
+    return view('frontend/contact');
+})->name('frontend.contact');
