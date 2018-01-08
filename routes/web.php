@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('frontend/home');
 })->name('frontend.home');
 
-Route::get('/about', function () {
+/*Route::get('/about', function () {
     return view('frontend/about');
 })->name('frontend.about');
 
@@ -30,3 +30,7 @@ Route::get('/pricing', function () {
 Route::get('/contact', function () {
     return view('frontend/contact');
 })->name('frontend.contact');
+
+//Route::get('/test', 'TestController@index')->name('frontend.test');*/
+
+Route::get('/{slug}', 'PageController@index')->name('frontend.page');
