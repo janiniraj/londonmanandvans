@@ -33,4 +33,21 @@ class PageController extends Controller
             return '';
         }
     }
+
+    public function home()
+    {       
+
+        $headerMenu = DB::table('pages')->pluck('name', 'route');
+
+        $pageData = DB::table('pages')->where('route', 'home')->first();
+
+        if($pageData)
+        {
+            return view('frontend.page')->with(['pageData' => $pageData, 'headerMenu' => $headerMenu, 'slug' => $slug]);
+        }
+        else
+        {
+            return '';
+        }
+    }
 }
