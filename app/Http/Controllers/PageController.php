@@ -43,7 +43,7 @@ class PageController extends Controller
 
         if($pageData)
         {
-            return view('frontend.page')->with(['pageData' => $pageData, 'headerMenu' => $headerMenu, 'slug' => $slug]);
+            return view('frontend.page')->with(['pageData' => $pageData, 'headerMenu' => $headerMenu, 'slug' => 'home']);
         }
         else
         {
