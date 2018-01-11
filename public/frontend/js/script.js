@@ -346,7 +346,7 @@ $(document).ready(function($) {
 		
 		$.ajax({
 			type: "POST",
-			url: 'contact.php',
+			url: $('#contact-form').attr('action'),
 			dataType: 'json',
 			cache: false,
 			data: $('#contact-form').serialize(),
