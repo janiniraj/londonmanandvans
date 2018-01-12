@@ -15,11 +15,9 @@
     return view('welcome');
 });*/
 
-Route::get('/', function () {
-    return view('frontend/home');
-})->name('frontend.home');
+Route::get('/', 'PageController@home')->name('frontend.home');
 
-Route::get('/about', function () {
+/*Route::get('/about', function () {
     return view('frontend/about');
 })->name('frontend.about');
 
@@ -32,3 +30,6 @@ Route::get('/contact', function () {
 })->name('frontend.contact');
 
 Route::get('/test', 'PageController@index')->name('frontend.test');
+//Route::get('/test', 'TestController@index')->name('frontend.test');*/
+
+Route::get('/{slug}', 'PageController@index')->name('frontend.page');

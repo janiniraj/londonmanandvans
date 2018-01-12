@@ -27,16 +27,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a  class="active" href="{{ route('frontend.home') }}">Home</a> </li>
-          <li><a href="{{ route('frontend.about') }}">About</a> </li>          
-          <li><a  href="{{ route('frontend.pricing') }}">Pricing</a> </li>          
-          <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
-          <li class="search drop"><a href="#" class="open-search"><i class="fa fa-search"></i></a>
-            <form class="form-search">
-              <input type="search" placeholder="Search:"/>
-              <button type="submit"> <i class="fa fa-search"></i> </button>
-            </form>
-          </li>
+          @foreach($headerMenu as $key => $value)
+            <li><a  class="{{ ($key == $slug) ? 'active' : ''}}" href="{{ route('frontend.page', $key) }}">{{$value}}</a> </li>
+          @endforeach
+          
         </ul>
       </div>
       <!-- /.navbar-collapse --> 
