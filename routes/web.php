@@ -30,3 +30,5 @@ Route::get('/pricing', function () {
 Route::get('/contact', function () {
     return view('frontend/contact');
 })->name('frontend.contact');
+
+Route::get('/test', 'PageController@index')->name('frontend.test');
