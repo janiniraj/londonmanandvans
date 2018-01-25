@@ -3703,7 +3703,8 @@ margin-top: 10px;
 	font-size: 14px;
 	padding: 6px 15px;
 	text-transform: uppercase;
-	font-weight: 5600;	line-height: 33px;
+	font-weight: 5600;
+	line-height: 33px;
 	margin-top: 13px;
 }
 .projects-page-section ul.filter li a.active,
@@ -5819,3 +5820,14 @@ footer .copyright p{
 	  background: #282828;
   }
 }
+
+
+
+/*---------------- Added By Niraj ---------------------*/
+.padding-top {
+    padding-top: 15px;
+}
+.no-left-padding {
+    padding-left: 0px;
+}
+/*---------------- End --------------------------------*/

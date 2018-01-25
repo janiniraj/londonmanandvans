@@ -33,3 +33,4 @@ Route::get('/test', 'PageController@index')->name('frontend.test');
 //Route::get('/test', 'TestController@index')->name('frontend.test');*/
 
 Route::get('/{slug}', 'PageController@index')->name('frontend.page');
+Route::get('/booking/quote', 'QuoteController@index')->name('frontend.booking.quote');

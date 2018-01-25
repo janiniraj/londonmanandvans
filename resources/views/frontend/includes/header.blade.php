@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           @foreach($headerMenu as $key => $value)
-            <li><a  class="{{ ($key == $slug) ? 'active' : ''}}" href="{{ route('frontend.page', $key) }}">{{$value}}</a> </li>
+            <li><a  class="{{ isset($slug) && ($key == $slug) ? 'active' : ''}}" href="{{ route('frontend.page', $key) }}">{{$value}}</a> </li>
           @endforeach
           
         </ul>
