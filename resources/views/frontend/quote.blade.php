@@ -50,7 +50,7 @@
 								    </div>
 								    <div class="form-group col-md-6">
 								      <label for="">Delivery Postcode</label>
-								      <input name="delivery_postcode" type="number" class="form-control delivery_postcode single-item-change" placeholder="Delivery Postcode">
+								      <input name="delivery_postcode" type="text" class="form-control delivery_postcode single-item-change" placeholder="Delivery Postcode">
 								    </div>
 							    </div>
 
@@ -130,7 +130,6 @@
 	$(document).ready(function(){
 
 		var settings = <?php echo $singleItemSettings; ?>;
-		console.log(settings);
 
 		var distance = 0;
 
@@ -230,7 +229,6 @@
 		function calculateQuote(){
 			distance 	= parseFloat(distance);
 			quotePrice 	= 0;
-
 			if(distance > 0)
 			{
 				if(distance <= settings.distance.threshold_distance)
@@ -259,7 +257,7 @@
 					quotePrice = parseFloat(quotePrice)+parseFloat(rulePrice);
 				}
 			}
-			$('.quote-price').text(quotePrice.toFixed(2));
+			$('.quote-price').text(Number.parseFloat(quotePrice).toFixed(2));
 		}
 
 	});
